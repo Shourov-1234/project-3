@@ -3,10 +3,9 @@ import 'donor_details_page.dart';
 
 class DonorListPage extends StatelessWidget {
   final List<Map<String, String>> donors = [
-    {'name': 'Tabib', 'bloodGroup': 'O+'},
-    {'name': 'Rahim', 'bloodGroup': 'A+'},
-    {'name': 'Karim', 'bloodGroup': 'B-'},
-    // Add more donors as needed
+    {'name': 'Rahat', 'bloodGroup': 'O+'},
+    {'name': 'Ridoy', 'bloodGroup': 'A+'},
+    {'name': 'Kazi', 'bloodGroup': 'B-'},
   ];
 
   @override
@@ -15,9 +14,9 @@ class DonorListPage extends StatelessWidget {
       appBar: AppBar(title: Text("Donor List")),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, // Adjust the number of columns in the grid
-          crossAxisSpacing: 10.0, // Spacing between columns
-          mainAxisSpacing: 10.0, // Spacing between rows
+          crossAxisCount: 2,
+          crossAxisSpacing: 10.0,
+          mainAxisSpacing: 10.0,
         ),
         itemCount: donors.length,
         itemBuilder: (context, index) {
@@ -31,6 +30,7 @@ class DonorListPage extends StatelessWidget {
               );
             },
             child: Card(
+              color: Colors.blue,
               elevation: 4.0,
               margin: EdgeInsets.all(8.0),
               child: Column(
@@ -38,10 +38,17 @@ class DonorListPage extends StatelessWidget {
                 children: [
                   Text(
                     donors[index]['name']!,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
                   SizedBox(height: 8),
-                  Text("Blood Group: ${donors[index]['bloodGroup']}"),
+                  Text("Blood Group: ${donors[index]['bloodGroup']}",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ))
                 ],
               ),
             ),
