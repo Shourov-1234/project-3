@@ -33,6 +33,7 @@ class DonorListPage extends StatelessWidget {
             child: Card(
               elevation: 4.0,
               margin: EdgeInsets.all(8.0),
+              color: Colors.red, // Set the background color of the card to red
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -41,11 +42,15 @@ class DonorListPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Colors.red, // Red color for the name
+                      color: Colors.black, // Default color for name
                     ),
                   ),
                   SizedBox(height: 8),
-                  Text("Blood Group: ${donors[index]['bloodGroup']}"),
+                  Text(
+                    "Blood Group: ${donors[index]['bloodGroup']}",
+                    style: TextStyle(
+                        color: Colors.white), // White text for blood group
+                  ),
                 ],
               ),
             ),
