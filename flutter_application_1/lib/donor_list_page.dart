@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'donor_details_page.dart';
 
 class DonorListPage extends StatelessWidget {
   final List<Map<String, String>> donors = [
