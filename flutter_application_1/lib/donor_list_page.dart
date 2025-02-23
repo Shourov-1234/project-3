@@ -38,7 +38,11 @@ class DonorListPage extends StatelessWidget {
                 children: [
                   Text(
                     donors[index]['name']!,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red, // Red color for the name
+                    ),
                   ),
                   SizedBox(height: 8),
                   Text("Blood Group: ${donors[index]['bloodGroup']}"),
